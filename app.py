@@ -47,7 +47,7 @@ def load_model():
 st.header("`Problem Statement 4 by Mukham`")
 
 file = st.file_uploader(label="Upload your invoice.",
-                        type=['jpg', 'jpeg', 'png', 'pdf'])
+                        type=['jpg', 'jpeg', 'png'])
 if not file:
     st.warning("Please upload the file.")
     st.stop()
