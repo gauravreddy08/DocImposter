@@ -1,17 +1,26 @@
-
-import tempfile
 from PIL import Image
 
 import torch
+from dataclasses import dataclass
+from typing import Optional, Tuple, Union
 from model import LayoutLMForQuestionAnswering
 
 from document import apply_ocr, _generate_document_output
+from ext.reg import AutoModelForDocumentQuestionAnswering
+from ext.document_qa import DocumentQuestionAnsweringPipeline
 
 from transformers import AutoConfig, AutoTokenizer
 from transformers import pipeline as transformers_pipeline
+from transformers.pipelines import PIPELINE_REGISTRY
 
 
 def load_model():
+
+    PIPELINE_REGISTRY.register_pipeline(
+    "document-question-answering",
+    pipeline_class=DocumentQuestionAnsweringPipeline,
+    pt_model=AutoModelForDocumentQuestionAnswering)
+
     config = AutoConfig.from_pretrained("impira/layoutlm-document-qa", revision="ff904df")
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -32,11 +41,9 @@ def load_model():
 
 
 nlp = load_model()
-image = Image.open("img.jpg")
-
+image = Image.open("im.jpg")
 
 words, boxes = apply_ocr(image)
 d = _generate_document_output(image, [words], [boxes])
-
 
 print(nlp(question="What is the invoice number", **d))

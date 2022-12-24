@@ -2,10 +2,6 @@ import pytesseract
 from typing import List
 
 def apply_ocr(image):
-  """
-  Applies Tesseract on a document image, and returns recognized words + normalized bounding boxes.
-  This was derived from LayoutLM preprocessing code in Huggingface's Transformers library.
-  """
   data = pytesseract.image_to_data(image, output_type="dict")
   words, left, top, width, height = data["text"], data["left"], data["top"], data["width"], data["height"]
 
