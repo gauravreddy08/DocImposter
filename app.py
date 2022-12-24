@@ -68,5 +68,4 @@ if submit:
     doc = document._generate_document_output(image, [words], [boxes])
 
     res1 = nlp(question="What is the invoice number?", **doc)[0]
-    res2 = nlp(question="What is the invoice date?", **doc)[0]
-    st.success(f"**Invoice Number:** {res1['answer']}\n\n**Invoice Date:** {res2['answer']}")
+    st.success(f"**Invoice Number:** {res1['answer']}")
