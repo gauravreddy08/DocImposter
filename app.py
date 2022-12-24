@@ -62,7 +62,7 @@ if submit:
     nlp = nlp if nlp!=None else load_model()
     
     image = Image.open(tfile.name)
-    # st.image(f, use_column_width=True)
+    st.image(f, use_column_width=False)
 
     words, boxes = document.apply_ocr(image=image)
     doc = document._generate_document_output(image, [words], [boxes])
