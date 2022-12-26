@@ -39,11 +39,10 @@ def load_model():
         tokenizer=tokenizer,
         device=device)
 
-
-nlp = load_model()
-image = Image.open("im.jpg")
-
-words, boxes = apply_ocr(image)
-d = _generate_document_output(image, [words], [boxes])
-
-print(nlp(question="What is the invoice number", **d))
+def run_model(img,ques):
+	nlp = load_model()
+	image = Image.open(img)
+	words, boxes = apply_ocr(image)
+	d = _generate_document_output(image, [words], [boxes])
+	k=str(nlp(question=ques, **d))
+	return k

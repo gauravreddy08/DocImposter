@@ -1,0 +1,117 @@
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 21:22:26 2022] ***
+compiled with version: 7.5.0 on 26 December 2022 15:46:42
+os: Linux-4.18.0-25-generic #26~18.04.1-Ubuntu SMP Thu Jun 27 07:28:31 UTC 2019
+nodename: e2e-108-15
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /etc/documposter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 46792
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address flaskapp.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.16 (main, Dec  7 2022, 01:11:58)  [GCC 7.5.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x556ec5469660
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named 'wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39483)
+spawned uWSGI worker 1 (pid: 39494, cores: 1)
+spawned uWSGI worker 2 (pid: 39496, cores: 1)
+spawned uWSGI worker 3 (pid: 39497, cores: 1)
+spawned uWSGI worker 4 (pid: 39499, cores: 1)
+spawned uWSGI worker 5 (pid: 39500, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 39499|app: -1|req: -1/1] 27.59.169.174 () {48 vars in 1016 bytes} [Mon Dec 26 21:25:14 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 3 buried after 0 seconds
+worker 4 buried after 0 seconds
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket flaskapp.sock removed.
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 21:26:47 2022] ***
+compiled with version: 7.5.0 on 26 December 2022 15:46:42
+os: Linux-4.18.0-25-generic #26~18.04.1-Ubuntu SMP Thu Jun 27 07:28:31 UTC 2019
+nodename: e2e-108-15
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /etc/documposter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 46792
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address flaskapp.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.16 (main, Dec  7 2022, 01:11:58)  [GCC 7.5.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5632735f6660
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Python version
+3.9.16 (main, Dec  7 2022, 01:11:58) 
+[GCC 7.5.0]
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5632735f6660 pid: 39610 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39610)
+spawned uWSGI worker 1 (pid: 39642, cores: 1)
+spawned uWSGI worker 2 (pid: 39644, cores: 1)
+spawned uWSGI worker 3 (pid: 39645, cores: 1)
+spawned uWSGI worker 4 (pid: 39646, cores: 1)
+spawned uWSGI worker 5 (pid: 39647, cores: 1)
+[pid: 39647|app: 0|req: 1/1] 27.59.169.174 () {46 vars in 954 bytes} [Mon Dec 26 21:26:59 2022] GET / => generated 350 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39647|app: 0|req: 2/2] 27.59.169.174 () {54 vars in 1241 bytes} [Mon Dec 26 21:27:17 2022] POST /api => generated 90 bytes in 6805 msecs (HTTP/1.1 200) 2 headers in 79 bytes (2 switches on core 0)
+[pid: 39647|app: 0|req: 3/3] 49.204.217.44 () {40 vars in 676 bytes} [Mon Dec 26 21:28:45 2022] GET / => generated 350 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 39647|app: 0|req: 4/4] 49.204.217.44 () {40 vars in 648 bytes} [Mon Dec 26 21:28:45 2022] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39647|app: 0|req: 5/5] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:29:05 2022] POST /api => generated 85 bytes in 6002 msecs (HTTP/1.1 200) 2 headers in 79 bytes (2 switches on core 0)
+[pid: 39642|app: 0|req: 1/6] 42.111.144.185 () {40 vars in 784 bytes} [Mon Dec 26 21:30:09 2022] GET / => generated 350 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 39642|app: 0|req: 2/7] 42.111.144.185 () {40 vars in 745 bytes} [Mon Dec 26 21:30:10 2022] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39644|app: 0|req: 1/8] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:30:37 2022] POST /api => generated 85 bytes in 6188 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 39647|app: 0|req: 6/9] 42.111.144.185 () {40 vars in 784 bytes} [Mon Dec 26 21:30:50 2022] GET / => generated 350 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39646|app: 0|req: 1/10] 42.111.144.185 () {50 vars in 1100 bytes} [Mon Dec 26 21:31:22 2022] POST /api => generated 83 bytes in 6469 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 2/11] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:31:41 2022] POST /api => generated 85 bytes in 6019 msecs (HTTP/1.1 200) 2 headers in 79 bytes (2 switches on core 0)
