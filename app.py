@@ -100,8 +100,8 @@ if submit:
             seller_name = nlp(question="What is the seller name?", **doc)[0]
             db.put({"key":hash, 
                     "invoice_number": str(inv_num['answer']),
-                    "invoice_date":str(inv_num['answer']), 
-                    "seller_name":str(inv_num['answer'])})
+                    "invoice_date":str(inv_date['answer']), 
+                    "seller_name":str(seller_name['answer'])})
             st.success("File info added to the database.")
             drive.put(f"{hash}.jpg", f)
 
