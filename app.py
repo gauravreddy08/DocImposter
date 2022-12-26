@@ -1,6 +1,6 @@
 import streamlit as st
 import tempfile
-from PIL import Image
+from PIL import Image, ImageDraw
 import hashlib
 
 from deta import Deta
@@ -73,6 +73,9 @@ if not file:
 else:
     submit = st.button("Submit")
 
+else:
+    submit = st.button("Submit")
+
 if submit:
     f = file.read()
     tfile = tempfile.NamedTemporaryFile(delete=False)
@@ -92,10 +95,20 @@ if submit:
         doc = document._generate_document_output(image, [words], [boxes])
 
         inv_num = nlp(question="What is the invoice number?", **doc)[0]
+        draw = ImageDraw.Draw(image)
+        id = inv_num['word_ids'][0]
 
         if db.fetch({"invoice_number":str(inv_num['answer'])}).count != 0:
+            draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="red", width=4)
+            draw = ImageDraw.Draw(image)
+            st.image(image, use_column_width=True)
             st.error("A file with same Invoice Number already exists in the Database.")
+            
         else:
+            draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="green", width=4)
+            draw = ImageDraw.Draw(image)
+            st.image(image, use_column_width=True)
+
             inv_date = nlp(question="What is the invoice date?", **doc)[0]
             seller_name = nlp(question="What is the seller name?", **doc)[0]
             db.put({"key":hash, 
