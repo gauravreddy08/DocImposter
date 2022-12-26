@@ -18,6 +18,8 @@ from transformers import AutoConfig, AutoTokenizer
 from transformers import pipeline as transformers_pipeline
 from transformers.pipelines import PIPELINE_REGISTRY
 
+st.set_page_config(page_title='Mukham')
+
 nlp=None
 blocksize=65536
 
