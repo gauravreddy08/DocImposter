@@ -44,5 +44,6 @@ def run_model(img,ques):
 	image = Image.open(img)
 	words, boxes = apply_ocr(image)
 	d = _generate_document_output(image, [words], [boxes])
-	k=str(nlp(question=ques, **d))
-	return k
+	k=nlp(question=ques, **d)
+	ans=k[0]['answer']
+	return ans
