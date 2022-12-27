@@ -1,0 +1,430 @@
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 21:22:26 2022] ***
+compiled with version: 7.5.0 on 26 December 2022 15:46:42
+os: Linux-4.18.0-25-generic #26~18.04.1-Ubuntu SMP Thu Jun 27 07:28:31 UTC 2019
+nodename: e2e-108-15
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /etc/documposter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 46792
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address flaskapp.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.16 (main, Dec  7 2022, 01:11:58)  [GCC 7.5.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x556ec5469660
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+ModuleNotFoundError: No module named 'wsgi'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39483)
+spawned uWSGI worker 1 (pid: 39494, cores: 1)
+spawned uWSGI worker 2 (pid: 39496, cores: 1)
+spawned uWSGI worker 3 (pid: 39497, cores: 1)
+spawned uWSGI worker 4 (pid: 39499, cores: 1)
+spawned uWSGI worker 5 (pid: 39500, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 39499|app: -1|req: -1/1] 27.59.169.174 () {48 vars in 1016 bytes} [Mon Dec 26 21:25:14 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 3 buried after 0 seconds
+worker 4 buried after 0 seconds
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket flaskapp.sock removed.
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 21:26:47 2022] ***
+compiled with version: 7.5.0 on 26 December 2022 15:46:42
+os: Linux-4.18.0-25-generic #26~18.04.1-Ubuntu SMP Thu Jun 27 07:28:31 UTC 2019
+nodename: e2e-108-15
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /etc/documposter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 46792
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address flaskapp.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.16 (main, Dec  7 2022, 01:11:58)  [GCC 7.5.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5632735f6660
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Python version
+3.9.16 (main, Dec  7 2022, 01:11:58) 
+[GCC 7.5.0]
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5632735f6660 pid: 39610 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 39610)
+spawned uWSGI worker 1 (pid: 39642, cores: 1)
+spawned uWSGI worker 2 (pid: 39644, cores: 1)
+spawned uWSGI worker 3 (pid: 39645, cores: 1)
+spawned uWSGI worker 4 (pid: 39646, cores: 1)
+spawned uWSGI worker 5 (pid: 39647, cores: 1)
+[pid: 39647|app: 0|req: 1/1] 27.59.169.174 () {46 vars in 954 bytes} [Mon Dec 26 21:26:59 2022] GET / => generated 350 bytes in 15 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39647|app: 0|req: 2/2] 27.59.169.174 () {54 vars in 1241 bytes} [Mon Dec 26 21:27:17 2022] POST /api => generated 90 bytes in 6805 msecs (HTTP/1.1 200) 2 headers in 79 bytes (2 switches on core 0)
+[pid: 39647|app: 0|req: 3/3] 49.204.217.44 () {40 vars in 676 bytes} [Mon Dec 26 21:28:45 2022] GET / => generated 350 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 39647|app: 0|req: 4/4] 49.204.217.44 () {40 vars in 648 bytes} [Mon Dec 26 21:28:45 2022] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39647|app: 0|req: 5/5] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:29:05 2022] POST /api => generated 85 bytes in 6002 msecs (HTTP/1.1 200) 2 headers in 79 bytes (2 switches on core 0)
+[pid: 39642|app: 0|req: 1/6] 42.111.144.185 () {40 vars in 784 bytes} [Mon Dec 26 21:30:09 2022] GET / => generated 350 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 39642|app: 0|req: 2/7] 42.111.144.185 () {40 vars in 745 bytes} [Mon Dec 26 21:30:10 2022] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39644|app: 0|req: 1/8] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:30:37 2022] POST /api => generated 85 bytes in 6188 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 39647|app: 0|req: 6/9] 42.111.144.185 () {40 vars in 784 bytes} [Mon Dec 26 21:30:50 2022] GET / => generated 350 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39646|app: 0|req: 1/10] 42.111.144.185 () {50 vars in 1100 bytes} [Mon Dec 26 21:31:22 2022] POST /api => generated 83 bytes in 6469 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 2/11] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:31:41 2022] POST /api => generated 85 bytes in 6019 msecs (HTTP/1.1 200) 2 headers in 79 bytes (2 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 3/12] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:32:44 2022] POST /api => generated 85 bytes in 5983 msecs (HTTP/1.1 200) 2 headers in 79 bytes (3 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 39642|app: 0|req: 3/13] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:33:25 2022] POST /api => generated 85 bytes in 6395 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 4/14] 42.111.144.185 () {50 vars in 1102 bytes} [Mon Dec 26 21:33:47 2022] POST /api => generated 81 bytes in 5808 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 5/15] 27.59.169.174 () {54 vars in 1241 bytes} [Mon Dec 26 21:34:29 2022] POST /api => generated 90 bytes in 5657 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 6/16] 42.111.144.185 () {50 vars in 1100 bytes} [Mon Dec 26 21:35:02 2022] POST /api => generated 81 bytes in 3952 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 7/17] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:36:24 2022] POST /api => generated 85 bytes in 5133 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 8/18] 27.59.169.174 () {54 vars in 1241 bytes} [Mon Dec 26 21:38:44 2022] POST /api => generated 90 bytes in 6187 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 9/19] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:41:37 2022] POST /api => generated 113 bytes in 6036 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 10/20] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:42:48 2022] POST /api => generated 113 bytes in 5317 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[pid: 39646|app: 0|req: 11/21] 49.204.217.44 () {48 vars in 963 bytes} [Mon Dec 26 21:43:31 2022] POST /api => generated 84 bytes in 5149 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+Mon Dec 26 21:48:01 2022 - worker 4 (pid: 39646) is taking too much time to die...NO MERCY !!!
+Mon Dec 26 21:48:01 2022 - worker 5 (pid: 39647) is taking too much time to die...NO MERCY !!!
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket flaskapp.sock removed.
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 21:48:03 2022] ***
+compiled with version: 7.5.0 on 26 December 2022 15:46:42
+os: Linux-4.18.0-25-generic #26~18.04.1-Ubuntu SMP Thu Jun 27 07:28:31 UTC 2019
+nodename: e2e-108-15
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /etc/documposter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 46792
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address flaskapp.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.16 (main, Dec  7 2022, 01:11:58)  [GCC 7.5.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5589121f5660
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Python version
+3.9.16 (main, Dec  7 2022, 01:11:58) 
+[GCC 7.5.0]
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5589121f5660 pid: 40688 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 40688)
+spawned uWSGI worker 1 (pid: 40719, cores: 1)
+spawned uWSGI worker 2 (pid: 40721, cores: 1)
+spawned uWSGI worker 3 (pid: 40722, cores: 1)
+spawned uWSGI worker 4 (pid: 40723, cores: 1)
+spawned uWSGI worker 5 (pid: 40724, cores: 1)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[2022-12-26 21:48:28,554] ERROR in app: Exception on /api [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/etc/documposter/./wsgi.py", line 23, in api
+    k=run_model(uploaded_file,ques)
+  File "/etc/documposter/./test.py", line 48, in run_model
+    ans=k['answer']
+TypeError: list indices must be integers or slices, not str
+[pid: 40721|app: 0|req: 1/1] 27.59.169.174 () {54 vars in 1241 bytes} [Mon Dec 26 21:48:22 2022] POST /api => generated 265 bytes in 6431 msecs (HTTP/1.1 500) 2 headers in 99 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket flaskapp.sock removed.
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 21:50:26 2022] ***
+compiled with version: 7.5.0 on 26 December 2022 15:46:42
+os: Linux-4.18.0-25-generic #26~18.04.1-Ubuntu SMP Thu Jun 27 07:28:31 UTC 2019
+nodename: e2e-108-15
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /etc/documposter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 46792
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address flaskapp.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.9.16 (main, Dec  7 2022, 01:11:58)  [GCC 7.5.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55c413fd8660
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Python version
+3.9.16 (main, Dec  7 2022, 01:11:58) 
+[GCC 7.5.0]
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55c413fd8660 pid: 40758 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 40758)
+spawned uWSGI worker 1 (pid: 40792, cores: 1)
+spawned uWSGI worker 2 (pid: 40794, cores: 1)
+spawned uWSGI worker 3 (pid: 40795, cores: 1)
+spawned uWSGI worker 4 (pid: 40796, cores: 1)
+spawned uWSGI worker 5 (pid: 40797, cores: 1)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 40792|app: 0|req: 1/1] 27.59.169.174 () {54 vars in 1241 bytes} [Mon Dec 26 21:50:46 2022] POST /api => generated 16 bytes in 5888 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 1/2] 115.244.41.195 () {42 vars in 727 bytes} [Mon Dec 26 22:06:54 2022] GET / => generated 350 bytes in 30 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 2/3] 115.244.41.195 () {42 vars in 727 bytes} [Mon Dec 26 22:06:54 2022] GET /favicon.ico => generated 207 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 2/4] 115.244.41.195 () {42 vars in 727 bytes} [Mon Dec 26 22:07:04 2022] GET / => generated 350 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 40796|app: 0|req: 1/5] 115.244.41.195 () {52 vars in 1045 bytes} [Mon Dec 26 22:12:00 2022] POST /api => generated 16 bytes in 6423 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 40795|app: 0|req: 3/6] 115.244.41.195 () {52 vars in 1045 bytes} [Mon Dec 26 22:12:47 2022] POST /api => generated 16 bytes in 5649 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 40796|app: 0|req: 2/7] 117.213.200.30 () {38 vars in 488 bytes} [Mon Dec 26 22:17:02 2022] GET / => generated 350 bytes in 17 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[2022-12-26 22:18:55,912] ERROR in app: Exception on /api [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+AttributeError: 'NoneType' object has no attribute 'seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/etc/documposter/./wsgi.py", line 23, in api
+    k=run_model(uploaded_file,ques)
+  File "/etc/documposter/./test.py", line 44, in run_model
+    image = Image.open(img)
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3137, in open
+    fp = io.BytesIO(fp.read())
+AttributeError: 'NoneType' object has no attribute 'read'
+[pid: 40792|app: 0|req: 3/8] 49.204.217.44 () {40 vars in 653 bytes} [Mon Dec 26 22:18:51 2022] GET /api => generated 265 bytes in 4711 msecs (HTTP/1.1 500) 2 headers in 99 bytes (1 switches on core 0)
+[2022-12-26 22:18:55,980] ERROR in app: Exception on /api [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+AttributeError: 'NoneType' object has no attribute 'seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/etc/documposter/./wsgi.py", line 23, in api
+    k=run_model(uploaded_file,ques)
+  File "/etc/documposter/./test.py", line 44, in run_model
+    image = Image.open(img)
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3137, in open
+    fp = io.BytesIO(fp.read())
+AttributeError: 'NoneType' object has no attribute 'read'
+[pid: 40797|app: 0|req: 1/9] 49.204.217.44 () {40 vars in 653 bytes} [Mon Dec 26 22:18:51 2022] GET /api => generated 265 bytes in 4836 msecs (HTTP/1.1 500) 2 headers in 99 bytes (1 switches on core 0)
+[pid: 40797|app: 0|req: 2/10] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 4/11] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon.png => generated 207 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 5/12] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 6/13] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:18:56 2022] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 7/14] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 8/15] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40794|app: 0|req: 1/16] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:18:56 2022] GET /favicon.ico => generated 207 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 4/17] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 5/18] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 6/19] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:18:56 2022] GET /favicon.ico => generated 207 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40796|app: 0|req: 3/20] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:18:56 2022] GET /apple-touch-icon.png => generated 207 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[pid: 40792|app: 0|req: 7/21] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:18:56 2022] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+document-question-answering is already registered. Overwriting pipeline for task document-question-answering...
+[2022-12-26 22:19:00,134] ERROR in app: Exception on /api [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+AttributeError: 'NoneType' object has no attribute 'seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/etc/documposter/./wsgi.py", line 23, in api
+    k=run_model(uploaded_file,ques)
+  File "/etc/documposter/./test.py", line 44, in run_model
+    image = Image.open(img)
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3137, in open
+    fp = io.BytesIO(fp.read())
+AttributeError: 'NoneType' object has no attribute 'read'
+[pid: 40792|app: 0|req: 8/22] 49.204.217.44 () {40 vars in 700 bytes} [Mon Dec 26 22:18:56 2022] GET /api => generated 265 bytes in 3871 msecs (HTTP/1.1 500) 2 headers in 99 bytes (1 switches on core 0)
+[2022-12-26 22:19:00,179] ERROR in app: Exception on /api [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+AttributeError: 'NoneType' object has no attribute 'seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/etc/documposter/./wsgi.py", line 23, in api
+    k=run_model(uploaded_file,ques)
+  File "/etc/documposter/./test.py", line 44, in run_model
+    image = Image.open(img)
+  File "/usr/local/lib/python3.9/dist-packages/PIL/Image.py", line 3137, in open
+    fp = io.BytesIO(fp.read())
+AttributeError: 'NoneType' object has no attribute 'read'
+[pid: 40796|app: 0|req: 4/23] 49.204.217.44 () {40 vars in 700 bytes} [Mon Dec 26 22:18:56 2022] GET /api => generated 265 bytes in 3980 msecs (HTTP/1.1 500) 2 headers in 99 bytes (1 switches on core 0)
+[pid: 40796|app: 0|req: 5/24] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40796|app: 0|req: 6/25] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon.png => generated 207 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 9/26] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40796|app: 0|req: 7/27] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:19:00 2022] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40794|app: 0|req: 2/28] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 10/29] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40797|app: 0|req: 3/30] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:19:00 2022] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40797|app: 0|req: 4/32] 49.204.217.44 () {38 vars in 580 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon-precomposed.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 9/32] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40795|app: 0|req: 10/33] 49.204.217.44 () {38 vars in 556 bytes} [Mon Dec 26 22:19:00 2022] GET /apple-touch-icon.png => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40794|app: 0|req: 3/34] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:19:00 2022] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 40792|app: 0|req: 11/35] 49.204.217.44 () {38 vars in 538 bytes} [Mon Dec 26 22:19:00 2022] GET /favicon.ico => generated 207 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
