@@ -79,51 +79,51 @@ else:
     submit = st.button("Submit")
 
 if submit:
-    if name is None:
+    if name=="":
         st.sidebar.error("Please Enter your name.")
-    
-    f = file.read()
-    tfile = tempfile.NamedTemporaryFile(delete=False)
-    tfile.write(f)
-
-    hash = hash_file(tfile.name)
-
-    if db.get(hash_file(tfile.name)) is not None:
-        st.error("File Already Exists in the Database.")
     else:
-        nlp = nlp if nlp!=None else load_model()
-    
-        image = Image.open(tfile.name)
-        # st.image(f, use_column_width=True)
+        f = file.read()
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        tfile.write(f)
 
-        words, boxes = document.apply_ocr(image=image)
-        doc = document._generate_document_output(image, [words], [boxes])
+        hash = hash_file(tfile.name)
 
-        inv_num = nlp(question="What is the invoice number?", **doc)[0]
-        draw = ImageDraw.Draw(image)
-        id = inv_num['word_ids'][0]
-
-        if db.fetch({"invoice_number":str(inv_num['answer'])}).count != 0:
-
-            draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="red", width=3)
-            draw = ImageDraw.Draw(image)
-            st.image(image, use_column_width=True)
-            st.error("A file with same Invoice Number already exists in the Database.")
-            
+        if db.get(hash_file(tfile.name)) is not None:
+            st.error("File Already Exists in the Database.")
         else:
-            draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="green", width=4)
+            nlp = nlp if nlp!=None else load_model()
+
+            image = Image.open(tfile.name)
+            # st.image(f, use_column_width=True)
+
+            words, boxes = document.apply_ocr(image=image)
+            doc = document._generate_document_output(image, [words], [boxes])
+
+            inv_num = nlp(question="What is the invoice number?", **doc)[0]
             draw = ImageDraw.Draw(image)
-            st.image(image, use_column_width=True)
+            id = inv_num['word_ids'][0]
 
-            inv_date = nlp(question="What is the invoice date?", **doc)[0]
-            seller_name = nlp(question="What is the seller name?", **doc)[0]
-            db.put({"key":hash, 
-                    "invoice_number": str(inv_num['answer']),
-                    "invoice_date":str(inv_date['answer']), 
-                    "seller_name":str(seller_name['answer'])})
+            if db.fetch({"invoice_number":str(inv_num['answer'])}).count != 0:
 
-            st.success("File info added to the database.")
-            drive.put(f"{hash}.jpg", f)
+                draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="red", width=3)
+                draw = ImageDraw.Draw(image)
+                st.image(image, use_column_width=True)
+                st.error("A file with same Invoice Number already exists in the Database.")
+
+            else:
+                draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="green", width=4)
+                draw = ImageDraw.Draw(image)
+                st.image(image, use_column_width=True)
+
+                inv_date = nlp(question="What is the invoice date?", **doc)[0]
+                seller_name = nlp(question="What is the seller name?", **doc)[0]
+                db.put({"key":hash, 
+                        "invoice_number": str(inv_num['answer']),
+                        "invoice_date":str(inv_date['answer']), 
+                        "seller_name":str(seller_name['answer'])})
+
+                st.success("File info added to the database.")
+                drive.put(f"{hash}.jpg", f)
 
 
 
