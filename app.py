@@ -74,14 +74,12 @@ if not file:
     st.warning("Please upload the file.")
     st.stop()
 else:
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     with col1:
-        label, box = st.columns(2)
-        with label:
-            st.write("**Your Name: **")
-        with box:
-            name = st.text_input("Your Name")
+        st.write("**Your Name: **")
     with col2:
+        name = st.text_input("Your Name")
+    with col3:
         submit = st.button("Submit")
 
 if submit:
