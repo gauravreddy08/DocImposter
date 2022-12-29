@@ -80,7 +80,7 @@ else:
         with label:
             st.write("**Your Name: **")
         with box:
-        name = st.text_input("Your Name")
+            name = st.text_input("Your Name")
     with col2:
         submit = st.button("Submit")
 
