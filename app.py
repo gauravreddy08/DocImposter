@@ -74,17 +74,15 @@ if not file:
     st.warning("Please upload the file.")
     st.stop()
 else:
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     with col1:
-        st.write("**Your Name:**")
-    with col2:
         name = st.text_input("", placeholder="Your Name", label_visibility="collapsed")
-    with col3:
+    with col2:
         submit = st.button("Submit")
 
 if submit:
     if name=="":
-        st.error("Please Enter your name.")
+        st.error("Please enter your name.")
     else:
         f = file.read()
         tfile = tempfile.NamedTemporaryFile(delete=False)
@@ -124,7 +122,8 @@ if submit:
                 db.put({"key":hash, 
                         "invoice_number": str(inv_num['answer']),
                         "invoice_date":str(inv_date['answer']), 
-                        "seller_name":str(seller_name['answer'])})
+                        "seller_name":str(seller_name['answer']),
+                        "user_name":str(name)})
 
                 st.success("File info added to the database.")
                 drive.put(f"{hash}.jpg", f)
