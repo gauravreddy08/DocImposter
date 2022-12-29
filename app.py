@@ -21,7 +21,8 @@ from transformers.pipelines import PIPELINE_REGISTRY
 nlp=None
 blocksize=65536
 
-st.set_page_config(page_title='Mukham')
+
+st.set_page_config(page_title='Doc Imposter')
 
 deta = Deta("d039yor3_NEChbz6ZyakvfAAtVzbKsKbEpLNcgi1a")
 db = deta.Base("invoice_data")
@@ -98,13 +99,14 @@ if submit:
         id = inv_num['word_ids'][0]
 
         if db.fetch({"invoice_number":str(inv_num['answer'])}).count != 0:
+
             draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="red", width=3)
             draw = ImageDraw.Draw(image)
             st.image(image, use_column_width=True)
             st.error("A file with same Invoice Number already exists in the Database.")
             
         else:
-            draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="green", width=3)
+            draw.rectangle([boxes[id][0]-5,boxes[id][1]-5,boxes[id][2]+5,boxes[id][3]+5], outline="green", width=4)
             draw = ImageDraw.Draw(image)
             st.image(image, use_column_width=True)
 
@@ -114,6 +116,7 @@ if submit:
                     "invoice_number": str(inv_num['answer']),
                     "invoice_date":str(inv_date['answer']), 
                     "seller_name":str(seller_name['answer'])})
+
             st.success("File info added to the database.")
             drive.put(f"{hash}.jpg", f)
 
