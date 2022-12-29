@@ -76,6 +76,10 @@ if not file:
 else:
     col1, col2 = st.columns(2)
     with col1:
+        label, box = st.columns(2)
+        with label:
+            st.write("**Your Name: **")
+        with box:
         name = st.text_input("Your Name")
     with col2:
         submit = st.button("Submit")
