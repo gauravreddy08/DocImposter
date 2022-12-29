@@ -68,19 +68,21 @@ def load_model():
 st.image("header.png", use_column_width=True)
 # st.header("`Problem Statement 4 by Mukham`")
 
-name = st.sidebar.text_input("Your Name")
-
 file = st.file_uploader(label="Upload your invoice.",
                         type=['jpg', 'jpeg', 'png'])
 if not file:
     st.warning("Please upload the file.")
     st.stop()
 else:
-    submit = st.button("Submit")
+    col1, col2 = st.columns(2)
+    with col1:
+        name = st.text_input("Your Name")
+    with col2:
+        submit = st.button("Submit")
 
 if submit:
     if name=="":
-        st.sidebar.error("Please Enter your name.")
+        st.error("Please Enter your name.")
     else:
         f = file.read()
         tfile = tempfile.NamedTemporaryFile(delete=False)
