@@ -24,7 +24,7 @@ blocksize=65536
 
 st.set_page_config(page_title='Doc Imposter')
 
-deta = Deta("d039yor3_NEChbz6ZyakvfAAtVzbKsKbEpLNcgi1a")
+deta = Deta(st.secrets["api"])
 db = deta.Base("invoice_data")
 drive = deta.Drive("files")
 
