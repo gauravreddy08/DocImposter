@@ -78,7 +78,7 @@ else:
     with col1:
         st.write("**Your Name:**")
     with col2:
-        name = st.text_input("Your Name")
+        name = st.text_input()
     with col3:
         submit = st.button("Submit")
 
