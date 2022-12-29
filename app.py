@@ -76,7 +76,7 @@ if not file:
 else:
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.write("**Your Name: **")
+        st.write("**Your Name:**")
     with col2:
         name = st.text_input("Your Name")
     with col3:
